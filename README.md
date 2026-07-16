@@ -1,12 +1,19 @@
-# agent-skills
+# Luke Agent Skills
 
-可同時供 Codex 與 Claude Code 使用的可攜 Agent Skills。
+個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程。
+
+## 定位
+
+- 收錄自己經常使用、值得標準化的工作流程。
+- 保持 project-agnostic：skill 不依賴特定產品、程式碼庫或組織內部環境。
+- 以可攜性優先：共用指令可同時用於 Codex 與 Claude Code；平台差異使用最小的 adapter 處理。
 
 ## Skills
 
 | Skill | 說明 |
 | --- | --- |
 | [`git-commit-review`](skills/git-commit-review/) | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
+| [`code-review-roasted`](skills/code-review-roasted/) | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
 
 ## 設計原則
 
