@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commit Review"
+  short_description: "檢查變更、規劃拆分並安全建立 Git commit"
+  default_prompt: "Use $git-commit-review to review and commit my staged changes."
