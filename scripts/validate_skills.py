@@ -47,7 +47,9 @@ def validate_skill(skill_md: Path) -> list[str]:
         )
 
     name = fields.get("name", "")
-    if not NAME_RE.fullmatch(name):
+    if len(name) > 64:
+        errors.append(f"{relative_path}: name must contain at most 64 characters")
+    elif not NAME_RE.fullmatch(name):
         errors.append(f"{relative_path}: name must be lowercase hyphen-case")
     elif skill_md.parent.name != name:
         errors.append(f"{relative_path}: parent directory must match name: {name}")
