@@ -10,10 +10,10 @@
 
 ## Skills
 
-| Skill | 說明 |
-| --- | --- |
-| [`git-commit-review`](skills/git-commit-review/) | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
-| [`code-review-roasted`](skills/code-review-roasted/) | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
+| 名稱 | 技術 ID | 說明 |
+| --- | --- | --- |
+| [提交審閱](skills/git-commit-review/) | `git-commit-review` | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
+| [火烤程式碼審查](skills/code-review-roasted/) | `code-review-roasted` | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
 
 ## 設計原則
 

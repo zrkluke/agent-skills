@@ -1,9 +1,9 @@
 ---
 name: git-commit-review
-description: 依使用者與專案規範檢查、review、規劃及安全建立 Git commit。當使用者要求查看 changed 或 staged files、整理變更、草擬或修正 commit message、決定拆分策略、暫存檔案、建立 commit、amend 或 revert 時使用。
+description: 提交審閱：依使用者與專案規範檢查、review、規劃及安全建立 Git commit。當使用者要求查看 changed 或 staged files、整理變更、草擬或修正 commit message、決定拆分策略、暫存檔案、建立 commit、amend 或 revert 時使用。
 ---
 
-# Git Commit Review
+# 提交審閱
 
 以繁體中文撰寫 review 與 commit message，程式碼註解維持英文。遵守目前 repository 的 `AGENTS.md` 與使用者明示指示；若衝突，以較具體且較高優先序的指示為準。
 

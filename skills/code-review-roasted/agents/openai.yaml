@@ -1,4 +1,4 @@
 interface:
-  display_name: "嚴格程式碼審查"
+  display_name: "火烤程式碼審查"
   short_description: "聚焦簡潔、相容性、真實工程風險與可維護性的嚴格審查"
   default_prompt: "Use $code-review-roasted to review these code changes."
