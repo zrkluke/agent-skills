@@ -15,6 +15,7 @@
 | [提交審閱](skills/git-commit-review/) | `git-commit-review` | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
 | [火烤程式碼審查](skills/code-review-roasted/) | `code-review-roasted` | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
 | [OpenSpec TDD](skills/openspec-use-tdd/) | `openspec-use-tdd` | 以獨立規劃 commit 與可觀察的 Red-Green-Refactor 證據實作 OpenSpec change。 |
+| [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 GitHub PR 草稿。 |
 
 ## 設計原則
 
