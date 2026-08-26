@@ -1,4 +1,4 @@
 interface:
   display_name: "提交審閱"
   short_description: "檢查變更、規劃拆分並安全建立 Git commit"
-  default_prompt: "Use $git-commit-review to review and commit my staged changes."
+  default_prompt: "Use $luke-commit-review to review and commit my staged changes."

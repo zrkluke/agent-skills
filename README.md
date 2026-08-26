@@ -12,10 +12,10 @@
 
 | 名稱 | 技術 ID | 說明 |
 | --- | --- | --- |
-| [提交審閱](skills/git-commit-review/) | `git-commit-review` | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
-| [火烤程式碼審查](skills/code-review-roasted/) | `code-review-roasted` | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
-| [OpenSpec TDD](skills/openspec-use-tdd/) | `openspec-use-tdd` | 以獨立規劃 commit 與可觀察的 Red-Green-Refactor 證據實作 OpenSpec change。 |
-| [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 GitHub PR 草稿。 |
+| [提交審閱](skills/luke-commit-review/) | `luke-commit-review` | 檢查 Git 變更、規劃提交拆分，並在確認後安全建立 commit。 |
+| [火烤程式碼審查](skills/luke-code-review-roasted/) | `luke-code-review-roasted` | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
+| [OpenSpec TDD](skills/luke-openspec-use-tdd/) | `luke-openspec-use-tdd` | 以獨立規劃 commit 與可觀察的 Red-Green-Refactor 證據實作 OpenSpec change。 |
+| [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 PR 草稿。 |
 
 ## 設計原則
 
@@ -40,8 +40,8 @@
 - Codex：內建 skill installer 使用 `$CODEX_HOME/skills/<skill-name>/`（預設為 `~/.codex/skills/<skill-name>/`）；現行官方文件也列出使用者層級的 `~/.agents/skills/<skill-name>/` 與 repository 層級的 `.agents/skills/<skill-name>/`。請以 Codex 的 `/skills` 確認目前環境實際載入的位置。
 - Claude Code：使用 `~/.claude/skills/<skill-name>/`，或專案內的 `.claude/skills/<skill-name>/`。
 
-例如，安裝 `git-commit-review` 時，複製整個
-`skills/git-commit-review/` 目錄，而不是只複製 `SKILL.md`。
+例如，安裝 `luke-commit-review` 時，複製整個
+`skills/luke-commit-review/` 目錄，而不是只複製 `SKILL.md`。
 
 ## 驗證
 

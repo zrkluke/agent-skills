@@ -1,11 +1,11 @@
 ---
 name: luke-write-pr
-description: 依 PR 相對 base branch（target branch）的淨變更，以繁體中文撰寫或改善 GitHub PR 的標題與說明。當使用者要求撰寫 PR、整理 PR 描述、確認合適的 base branch、將 branch 變更歸納為 review guide，或改寫既有 PR 草稿時使用。只產出草稿文字；不建立 commit、不 push、不開 PR，也不更新既有 PR。
+description: 依 PR 相對 base branch（target branch）的淨變更，以繁體中文撰寫或改善 PR 的標題與說明。當使用者要求撰寫 PR、整理 PR 描述、確認合適的 base branch、將 branch 變更歸納為 review guide，或改寫既有 PR 草稿時使用。只產出草稿文字；不建立 commit、不 push、不開 PR，也不更新既有 PR。
 ---
 
 # PR 說明撰寫
 
-撰寫讓 reviewer 能快速理解與判斷的 PR 說明。預設只產出標題與 Markdown 草稿；除非使用者明確要求，請勿建立、更新或送出 GitHub PR。
+撰寫讓 reviewer 能快速理解與判斷的 PR 說明。預設只產出標題與 Markdown 草稿；除非使用者明確要求，請勿建立、更新或送出 PR。
 
 ## 先確認事實範圍
 
@@ -22,7 +22,7 @@ description: 依 PR 相對 base branch（target branch）的淨變更，以繁�
 
 ## Template 優先
 
-先檢查目標 repo 是否有 `.github/pull_request_template.md`（或 GitHub 指定的 PR template）。若存在，保留其區段與必要欄位，並依 template 內的註解填寫；不得為了套用本 skill 而覆蓋 repo 已有的團隊格式。
+先檢查目標 repo 是否有 PR template，例如 `.github/pull_request_template.md`。若存在，保留其區段與必要欄位，並依 template 內的註解填寫；不得為了套用本 skill 而覆蓋 repo 已有的團隊格式。
 
 若 repo 沒有 template，讀取並使用 [PR 範本](references/pr_template.md)。範本的 HTML 註解只用來協助撰寫，不要保留在交付給使用者的 PR 草稿中。
 

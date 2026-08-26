@@ -1,5 +1,5 @@
 ---
-name: git-commit-review
+name: luke-commit-review
 description: 提交審閱：依使用者與專案規範檢查、review、規劃及安全建立 Git commit。當使用者要求查看 changed 或 staged files、整理變更、草擬或修正 commit message、決定拆分策略、暫存檔案、建立 commit、amend 或 revert 時使用。
 ---
 

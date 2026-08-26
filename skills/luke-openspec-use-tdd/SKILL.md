@@ -1,5 +1,5 @@
 ---
-name: openspec-use-tdd
+name: luke-openspec-use-tdd
 description: 以規劃 commit 與 TDD 實作 OpenSpec change。當 proposal 完成後準備實作、開始或繼續 apply change、要求以 Red-Green-Refactor 完成 spec-driven 工作，或一路完成 OpenSpec change 時使用；不適用於純探索、只做 code review 或只封存 change。
 ---
 

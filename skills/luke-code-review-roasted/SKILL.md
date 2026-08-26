@@ -1,5 +1,5 @@
 ---
-name: code-review-roasted
+name: luke-code-review-roasted
 description: 火烤程式碼審查：對程式碼變更進行直接、嚴格且建設性的設計 review，聚焦資料結構、複雜度、相容性、真實安全風險與可維護性。當使用者要求嚴格 code review、Linus 風格 review、挑毛病、判斷是否值得合併，或審查 diff 與 PR 時使用；目前 goal 明確要求反覆 review 與修正時也可使用。不要用於一般、非嚴格的 code review。
 ---
 
