@@ -33,7 +33,26 @@
 - [Anthropic：Extend Claude with skills](https://code.claude.com/docs/en/slash-commands) 說明 Claude Code 的 `SKILL.md`、載入位置與平台專屬擴充語法。
 - `scripts/validate_skills.py` 將共用 frontmatter 限制為 `name` 與 `description`，並拒絕 Claude Code 專屬的參數替換、環境變數替換與 shell injection，避免共用內容只在單一平台生效。
 
-## 安裝
+## Plugin 安裝
+
+可將整套四個 skills 作為一個 plugin 安裝；skill 內容仍共用此 repository 的
+`skills/` 目錄。
+
+Codex：
+
+```sh
+codex plugin marketplace add zrkluke/agent-skills
+codex plugin add luke-agent-skills@luke-agent-skills
+```
+
+Claude Code：
+
+```text
+/plugin marketplace add zrkluke/agent-skills
+/plugin install luke-agent-skills@luke-agent-skills
+```
+
+## 手動安裝
 
 將所需的 skill 目錄完整複製到目標工具的 skill discovery 位置。
 

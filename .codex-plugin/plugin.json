@@ -1,0 +1,36 @@
+{
+  "name": "luke-agent-skills",
+  "version": "0.1.0",
+  "description": "Git 開發流程 skills：嚴格程式碼審查、OpenSpec TDD、提交審閱與 PR 說明撰寫。",
+  "author": {
+    "name": "Luke@WITS",
+    "url": "https://github.com/zrkluke"
+  },
+  "homepage": "https://github.com/zrkluke/agent-skills",
+  "repository": "https://github.com/zrkluke/agent-skills",
+  "keywords": [
+    "git",
+    "code-review",
+    "openspec",
+    "tdd",
+    "pull-request"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Luke Agent Skills",
+    "shortDescription": "Git 開發流程的可攜 skills 套組。",
+    "longDescription": "提供嚴格程式碼審查、OpenSpec TDD、Git 提交審閱與 PR 說明撰寫，適用於 Codex 與 Claude Code 的 Git 開發流程。",
+    "developerName": "Luke@WITS",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/zrkluke/agent-skills",
+    "defaultPrompt": [
+      "嚴格審查這次程式碼變更。",
+      "檢查 staged 變更並規劃 commit。",
+      "依這個 branch 的變更撰寫 PR 說明。"
+    ]
+  }
+}

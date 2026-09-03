@@ -1,0 +1,15 @@
+{
+  "name": "luke-agent-skills",
+  "metadata": {
+    "description": "Git 開發流程 skills：嚴格程式碼審查、OpenSpec TDD、提交審閱與 PR 說明撰寫。"
+  },
+  "owner": {
+    "name": "Luke@WITS"
+  },
+  "plugins": [
+    {
+      "name": "luke-agent-skills",
+      "source": "./"
+    }
+  ]
+}
