@@ -91,7 +91,15 @@ npx skills add https://github.com/ai-evals-course/evals-skills -g
 npx skills add https://github.com/ai-evals-course/evals-skills --skill eval-audit -g
 ```
 
-`-g` 會安裝到使用者層級；若只想用在目前專案，可移除 `-g`。安裝後不會自動跟著上游更新；使用 `npx skills` 安裝的項目可用 `npx skills check` 檢查更新，再用 `npx skills update` 更新。安裝方式與可用的 skill 名稱以各上游文件為準。
+`-g` 會安裝到使用者層級；若只想用在目前專案，可移除 `-g`。
+
+### 第三方 skills 的更新方式
+
+- **使用 `npx skills` 安裝**：獨立安裝的 skills 不會自動跟著上游更新。執行 `npx skills check` 檢查更新，再執行 `npx skills update` 更新；只更新使用者層級的 skills 可用 `npx skills update -g`。
+- **使用 Codex plugin marketplace 安裝**：plugin 更新時，包含的 skills 也可隨 plugin 更新。Codex 會重新整理已設定的 Git marketplace；也可執行 `codex plugin marketplace upgrade <marketplace-name>` 手動重新整理。重新整理後開啟新對話，並確認安裝的 plugin 版本；來源、版本設定及平台行為都會影響取得的內容。[Codex plugin 文件](https://developers.openai.com/plugins/build/plugins)
+- **使用 Claude Code plugin marketplace 安裝**：更新方式取決於 marketplace 的自動更新設定。第三方 marketplace 預設關閉自動更新，可在 `/plugin` 的 Marketplaces 分頁啟用；也可在 Installed 分頁選擇 Update now，或在終端機執行 `claude plugin update <plugin>@<marketplace>`。更新後執行 `/reload-plugins` 或開啟新對話。[Claude Code plugin 文件](https://code.claude.com/docs/en/discover-plugins#keep-plugins-updated)
+
+不同安裝方式各自管理版本；安裝方式與可用的 skill 名稱以各上游文件為準。
 
 ## 設計原則
 
