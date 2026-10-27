@@ -18,6 +18,81 @@
 | [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 PR 草稿。 |
 | [從研究到實作](skills/luke-research-to-code/) | `luke-research-to-code` | 依 CRISPY 八階段流程，先研究現況、對齊設計與大綱，再分段實作。 |
 
+## 第三方 skill 推薦
+
+以下 skills 由各自的上游專案維護，需另外安裝；本 repo 不收錄它們的內容。
+使用 `npx skills` 的安裝指令需要 Node.js 與 npm，執行後可依提示選擇要使用的工具與 skills。
+
+### Archify
+
+[tt-a1i/archify](https://github.com/tt-a1i/archify) 可將需求、程式碼或 Mermaid 轉成互動式架構圖、流程圖等。
+
+```sh
+npx skills add tt-a1i/archify -g
+```
+
+### Diagram Design
+
+[cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) 可製作架構圖、流程圖、時序圖、資料模型與各種圖表，也支援匯入 Mermaid 等格式。
+
+Codex：
+
+```sh
+codex plugin marketplace add cathrynlavery/diagram-design
+codex plugin add diagram-design@diagram-design
+```
+
+Claude Code：
+
+```text
+/plugin marketplace add cathrynlavery/diagram-design
+/plugin install diagram-design@diagram-design
+```
+
+### Ponytail
+
+[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) 協助在開發與審查時找出能完整解決問題的精簡做法，避免不必要的複雜度。
+
+套件也提供以下 skills：
+
+- `ponytail-review`：審查程式碼變更，檢查錯誤、安全性、測試、效能與多餘程式碼。
+- `ponytail-audit`：檢查整個 repo，依影響程度整理問題。
+- `ponytail-debt`：整理程式碼中標記的 `shortcut:` 技術債。
+- `ponytail-gain`：查看 Ponytail 基準測試中測得的程式碼、成本與速度變化。
+- `ponytail-help`：查看 Ponytail 的使用方式與指令。
+
+Codex：
+
+```sh
+codex plugin marketplace add DietrichGebert/ponytail
+codex plugin add ponytail@ponytail
+```
+
+接著依上游說明，在 Codex 開啟 `/hooks` 並信任兩個 lifecycle hooks，再開始新的對話。
+
+Claude Code：
+
+```text
+/plugin marketplace add DietrichGebert/ponytail
+/plugin install ponytail@ponytail
+```
+
+### Eval Skills
+
+[ai-evals-course/evals-skills](https://github.com/ai-evals-course/evals-skills) 提供 LLM 評估相關 skills，包含評估流程健檢、失敗案例分析、合成資料、評審校準與 RAG 評估。
+
+```sh
+npx skills add https://github.com/ai-evals-course/evals-skills -g
+```
+
+只需要其中一個時，可以指定名稱，例如：
+
+```sh
+npx skills add https://github.com/ai-evals-course/evals-skills --skill eval-audit -g
+```
+
+`-g` 會安裝到使用者層級；若只想用在目前專案，可移除 `-g`。安裝後不會自動跟著上游更新；使用 `npx skills` 安裝的項目可用 `npx skills check` 檢查更新，再用 `npx skills update` 更新。安裝方式與可用的 skill 名稱以各上游文件為準。
+
 ## 設計原則
 
 - 每個 skill 只有一份 `SKILL.md`，作為跨平台的唯一指令來源。
