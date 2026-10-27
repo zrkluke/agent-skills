@@ -1,7 +1,7 @@
 {
   "name": "luke-agent-skills",
   "version": "0.1.0",
-  "description": "Git 開發流程 skills：嚴格程式碼審查、OpenSpec TDD、提交審閱與 PR 說明撰寫。",
+  "description": "開發流程 skills：研究與規劃、分段實作、嚴格程式碼審查、OpenSpec TDD、提交審閱與 PR 說明撰寫。",
   "author": {
     "name": "Luke@WITS",
     "url": "https://github.com/zrkluke"

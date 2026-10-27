@@ -16,6 +16,7 @@
 | [火烤程式碼審查](skills/luke-code-review-roasted/) | `luke-code-review-roasted` | 針對變更進行直接、嚴格且建設性的程式碼審查。 |
 | [OpenSpec TDD](skills/luke-openspec-use-tdd/) | `luke-openspec-use-tdd` | 以獨立規劃 commit 與可觀察的 Red-Green-Refactor 證據實作 OpenSpec change。 |
 | [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 PR 草稿。 |
+| [從研究到實作](skills/luke-research-to-code/) | `luke-research-to-code` | 依 CRISPY 八階段流程，先研究現況、對齊設計與大綱，再分段實作。 |
 
 ## 設計原則
 
@@ -35,7 +36,7 @@
 
 ## Plugin 安裝
 
-可將整套四個 skills 作為一個 plugin 安裝；skill 內容仍共用此 repository 的
+可將整套五個 skills 作為一個 plugin 安裝；skill 內容仍共用此 repository 的
 `skills/` 目錄。
 
 Codex：

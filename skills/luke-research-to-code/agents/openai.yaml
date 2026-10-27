@@ -1,0 +1,4 @@
+interface:
+  display_name: "Luke：從研究到實作"
+  short_description: "用八個階段分開研究、設計與實作，支援只做規劃或接續開發"
+  default_prompt: "使用 $luke-research-to-code 整理這個任務的現況、設計與實作大綱，先完成前五階段。"
