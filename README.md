@@ -1,6 +1,6 @@
 # Luke Agent Skills
 
-個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程。
+個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程，也保存個人全域指令，方便搬到其他電腦。
 
 ## 定位
 
@@ -145,6 +145,32 @@ Claude Code：
 
 例如，安裝 `luke-commit-review` 時，複製整個
 `skills/luke-commit-review/` 目錄，而不是只複製 `SKILL.md`。
+
+## 全域指令與搬家
+
+`global/` 依工具保存完整的個人全域指令，與 `skills/` 的工作流程分開管理。
+Repo 根目錄的 `AGENTS.md`、`CLAUDE.md` 則留給本專案自己的規則。
+
+| Repo 內檔案 | 本機預設位置 |
+| --- | --- |
+| [global/codex/AGENTS.md](global/codex/AGENTS.md) | `~/.codex/AGENTS.md` |
+| [global/claude/CLAUDE.md](global/claude/CLAUDE.md) | `~/.claude/CLAUDE.md` |
+
+`~` 代表使用者的家目錄。Codex 若有設定 `CODEX_HOME`，目標位置改為
+`$CODEX_HOME/AGENTS.md`；該目錄若有非空白的 `AGENTS.override.md`，Codex 會優先讀取它。
+載入方式可參考 [Codex 官方文件](https://learn.chatgpt.com/docs/agent-configuration/agents-md)與
+[Claude Code 官方文件](https://code.claude.com/docs/en/memory)。
+
+搬到新電腦時：
+
+1. Clone 這個 repo，並依前面的安裝說明安裝需要的 skills。
+2. 檢查目標位置是否已有全域指令；若有，先備份並比對差異，再決定要套用的內容。
+3. 建立需要的目標目錄，依上表手動複製兩個檔案。
+4. 在工具中開啟新對話，確認全域指令已載入。
+
+安裝本 repo 的 plugin 只會安裝 skills，不會自動套用 `global/` 內的檔案。
+日常維護以 repo 版本為準：先修改 repo 內的檔案，再複製到本機生效位置；
+若先在本機修改，也要將差異同步回 repo。兩份指令各自保留工具需要的內容，不會自動合併或同步。
 
 ## 驗證
 
