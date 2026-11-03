@@ -5,7 +5,7 @@ description: 依 PR 相對 base branch（target branch）的淨變更，以繁�
 
 # PR 說明撰寫
 
-> 作者：[Luke（zrkluke）](https://github.com/zrkluke) · [部落格](https://lukedevnotes.com/en) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
+> 作者：[Luke（zrkluke）](https://github.com/zrkluke) · [部落格](https://lukedevnotes.com/) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
 > 著作權所有 © 2026 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；依現狀提供，不提供保證。
 
 撰寫讓 reviewer 能快速理解與判斷的 PR 說明。預設只產出標題與 Markdown 草稿；除非使用者明確要求，請勿建立、更新或送出 PR。

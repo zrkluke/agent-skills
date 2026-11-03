@@ -10,7 +10,7 @@
 
 ```markdown
 本內容取自 [Luke Agent Skills](https://github.com/zrkluke/agent-skills)，
-作者為 [Luke（zrkluke）](https://github.com/zrkluke)（[部落格](https://lukedevnotes.com/en)），著作權所有 © 2026。
+作者為 [Luke（zrkluke）](https://github.com/zrkluke)（[部落格](https://lukedevnotes.com/)），著作權所有 © 2026。
 採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權，依現狀提供，不提供保證。
 修改情形：未修改。
 ```
