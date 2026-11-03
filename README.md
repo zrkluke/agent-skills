@@ -2,7 +2,7 @@
 
 個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程，也保存個人全域指令，方便搬到其他電腦。
 
-由 [Luke@WITS（zrkluke）](https://github.com/zrkluke) 維護。
+由 [Luke（zrkluke）](https://github.com/zrkluke) 維護。
 [原始專案與最新版本](https://github.com/zrkluke/agent-skills)。
 
 ## 定位
@@ -196,7 +196,7 @@ python scripts/validate_skills.py
 
 ```markdown
 本內容取自 [Luke Agent Skills](https://github.com/zrkluke/agent-skills)，
-作者為 [Luke@WITS（zrkluke）](https://github.com/zrkluke)，著作權所有 © 2026。
+作者為 [Luke（zrkluke）](https://github.com/zrkluke)，著作權所有 © 2026。
 採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權，依現狀提供，不提供保證。
 修改情形：未修改。
 ```

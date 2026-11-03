@@ -5,7 +5,7 @@ description: 以規劃 commit 與 TDD 實作 OpenSpec change。當 proposal 完�
 
 # OpenSpec TDD
 
-> 作者：[Luke@WITS（zrkluke）](https://github.com/zrkluke) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
+> 作者：[Luke（zrkluke）](https://github.com/zrkluke) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
 > 著作權所有 © 2026 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；依現狀提供，不提供保證。
 
 讓 OpenSpec 的規劃、實作與封存在 Git 歷史中保持可獨立 review，並以可觀察的 Red → Green → Refactor 證據完成每項行為。
