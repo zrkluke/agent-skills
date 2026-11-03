@@ -2,6 +2,9 @@
 
 個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程，也保存個人全域指令，方便搬到其他電腦。
 
+由 [Luke@WITS（zrkluke）](https://github.com/zrkluke) 維護。
+[原始專案與最新版本](https://github.com/zrkluke/agent-skills)。
+
 ## 定位
 
 - 收錄自己經常使用、值得標準化的工作流程。
@@ -181,3 +184,22 @@ python scripts/validate_skills.py
 ```
 
 此檢查會驗證本 repo 的可攜性約定與基本 skill 結構。GitHub Actions 會在 push 與 pull request 時自動執行相同檢查。
+
+## 授權與來源標示
+
+本專案的 skills、文件與設定採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)；
+`scripts/` 內的程式碼採用 [MIT](scripts/LICENSE)。適用範圍見 [LICENSE](LICENSE)。
+
+歡迎轉載、改作、商用或收錄到其他 skills 套件。分享時，須依 CC BY 4.0
+保留作者、著作權、授權與免責聲明，以及實際可行範圍內的來源連結，並標示是否修改。
+可放在 README、套件介紹或其他適合的來源說明處；建議使用下列範例，讓讀者能找到原始專案。
+
+```markdown
+本內容取自 [Luke Agent Skills](https://github.com/zrkluke/agent-skills)，
+作者為 [Luke@WITS（zrkluke）](https://github.com/zrkluke)，著作權所有 © 2026。
+採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權，依現狀提供，不提供保證。
+修改情形：未修改。
+```
+
+如有改作，請將最後一行換成實際修改說明，例如「修改情形：調整為團隊的 PR 流程。」
+每個 `SKILL.md` 也附有來源與授權資訊，單獨轉載時可一併保留。

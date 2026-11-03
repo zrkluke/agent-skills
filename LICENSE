@@ -1,0 +1,30 @@
+# Luke Agent Skills 授權
+
+著作權所有 © 2026 Luke@WITS（GitHub：zrkluke）。
+原始專案：https://github.com/zrkluke/agent-skills
+
+## Skills、文件與設定
+
+除另有標示外，本專案的 skills、參考文件、README、全域指令與設定檔，
+採用 Creative Commons 姓名標示 4.0 國際（CC BY 4.0）授權。
+
+完整授權條款：https://creativecommons.org/licenses/by/4.0/legalcode.zh-hant
+
+你可以使用、複製、分享、改作及商用。分享原始內容或改作版本時，
+須依授權條款，以符合媒介與情境的合理方式保留作者、著作權聲明、
+授權與免責聲明，以及實際可行範圍內的原始內容連結，並標示是否修改。
+
+內容依現狀提供，不提供保證；免責與責任限制以完整授權條款第 5 條為準。
+本檔案的說明不新增或取代 CC BY 4.0 的條件。
+
+## 程式碼
+
+`scripts/` 內的程式碼採用 MIT 授權，完整條款見 `scripts/LICENSE`。
+
+## 適用範圍
+
+本授權適用於本專案中有權授權的內容。第三方素材如有另行標示，
+仍依各自的授權條款；README 推薦的外部專案不包含在本授權內。
+
+使用 skill 後產出的程式碼、文件或其他結果，不會僅因使用 skill 就自動
+適用本授權；若結果重製或改作本專案受保護的內容，仍須遵守適用條款。

@@ -5,6 +5,9 @@ description: 提交審閱：依使用者與專案規範檢查、review、規劃�
 
 # 提交審閱
 
+> 作者：[Luke@WITS（zrkluke）](https://github.com/zrkluke) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
+> 著作權所有 © 2026 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；依現狀提供，不提供保證。
+
 以繁體中文撰寫 review 與 commit message，程式碼註解維持英文。遵守目前 repository 的 `AGENTS.md` 與使用者明示指示；若衝突，以較具體且較高優先序的指示為準。
 
 ## 適用情況

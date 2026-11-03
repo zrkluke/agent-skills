@@ -5,6 +5,9 @@ description: 火烤程式碼審查：對程式碼變更進行直接、嚴格且�
 
 # 火烤程式碼審查
 
+> 作者：[Luke@WITS（zrkluke）](https://github.com/zrkluke) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
+> 著作權所有 © 2026 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；依現狀提供，不提供保證。
+
 只提供 review，不修改程式碼、檔案或 Git 狀態。語氣直接而專業；批評設計與結果，不批評人。
 
 ## 審查原則
