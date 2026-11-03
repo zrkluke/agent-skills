@@ -2,7 +2,7 @@
 
 整理可跨專案使用、支援 Codex 與 Claude Code 的 skills，也保存個人全域指令。
 
-由 [Luke（zrkluke）](https://github.com/zrkluke) 維護，最新版本見[原始專案](https://github.com/zrkluke/agent-skills)。
+由 [Luke（zrkluke）](https://github.com/zrkluke) 維護 · [部落格](https://lukedevnotes.com/en) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)。
 
 ## Skills
 

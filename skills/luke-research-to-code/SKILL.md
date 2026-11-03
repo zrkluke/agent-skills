@@ -5,7 +5,7 @@ description: "依 Dex Horthy 的 CRISPY 八階段流程，先研究現況、對�
 
 # 從研究到實作
 
-> 作者：[Luke（zrkluke）](https://github.com/zrkluke) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
+> 作者：[Luke（zrkluke）](https://github.com/zrkluke) · [部落格](https://lukedevnotes.com/en) · [原始專案與最新版本](https://github.com/zrkluke/agent-skills)
 > 著作權所有 © 2026 · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)；依現狀提供，不提供保證。
 
 把現況事實、設計決策、實作順序與程式變更分開，讓錯誤假設在大量寫程式前被看見。本技能依 Dex Horthy 的 CRISPY 演講整理文章所述八階段改寫，屬跨專案流程，並非 Dex 官方技能。
