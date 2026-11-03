@@ -1,15 +1,8 @@
 # Luke Agent Skills
 
-個人維護的 Agent Skills catalog，整理可跨專案重複使用，並以 Codex 與 Claude Code 為目標的工作流程，也保存個人全域指令，方便搬到其他電腦。
+整理可跨專案使用、支援 Codex 與 Claude Code 的 skills，也保存個人全域指令。
 
-由 [Luke（zrkluke）](https://github.com/zrkluke) 維護。
-[原始專案與最新版本](https://github.com/zrkluke/agent-skills)。
-
-## 定位
-
-- 收錄自己經常使用、值得標準化的工作流程。
-- 保持 project-agnostic：skill 不依賴特定產品、程式碼庫或組織內部環境。
-- 以可攜性優先：共用指令可同時用於 Codex 與 Claude Code；平台差異使用最小的 adapter 處理。
+由 [Luke（zrkluke）](https://github.com/zrkluke) 維護，最新版本見[原始專案](https://github.com/zrkluke/agent-skills)。
 
 ## Skills
 
@@ -21,109 +14,9 @@
 | [PR 說明撰寫](skills/luke-write-pr/) | `luke-write-pr` | 依 PR 淨變更撰寫清楚、易於審閱的 PR 草稿。 |
 | [從研究到實作](skills/luke-research-to-code/) | `luke-research-to-code` | 依 CRISPY 八階段流程，先研究現況、對齊設計與大綱，再分段實作。 |
 
-## 第三方 skill 推薦
+## 安裝
 
-以下 skills 由各自的上游專案維護，需另外安裝；本 repo 不收錄它們的內容。
-使用 `npx skills` 的安裝指令需要 Node.js 與 npm，執行後可依提示選擇要使用的工具與 skills。
-
-### Archify
-
-[tt-a1i/archify](https://github.com/tt-a1i/archify) 可將需求、程式碼或 Mermaid 轉成互動式架構圖、流程圖等。
-
-```sh
-npx skills add tt-a1i/archify -g
-```
-
-### Diagram Design
-
-[cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) 可製作架構圖、流程圖、時序圖、資料模型與各種圖表，也支援匯入 Mermaid 等格式。
-
-Codex：
-
-```sh
-codex plugin marketplace add cathrynlavery/diagram-design
-codex plugin add diagram-design@diagram-design
-```
-
-Claude Code：
-
-```text
-/plugin marketplace add cathrynlavery/diagram-design
-/plugin install diagram-design@diagram-design
-```
-
-### Ponytail
-
-[DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) 協助在開發與審查時找出能完整解決問題的精簡做法，避免不必要的複雜度。
-
-套件也提供以下 skills：
-
-- `ponytail-review`：審查程式碼變更，檢查錯誤、安全性、測試、效能與多餘程式碼。
-- `ponytail-audit`：檢查整個 repo，依影響程度整理問題。
-- `ponytail-debt`：整理程式碼中標記的 `shortcut:` 技術債。
-- `ponytail-gain`：查看 Ponytail 基準測試中測得的程式碼、成本與速度變化。
-- `ponytail-help`：查看 Ponytail 的使用方式與指令。
-
-Codex：
-
-```sh
-codex plugin marketplace add DietrichGebert/ponytail
-codex plugin add ponytail@ponytail
-```
-
-接著依上游說明，在 Codex 開啟 `/hooks` 並信任兩個 lifecycle hooks，再開始新的對話。
-
-Claude Code：
-
-```text
-/plugin marketplace add DietrichGebert/ponytail
-/plugin install ponytail@ponytail
-```
-
-### Eval Skills
-
-[ai-evals-course/evals-skills](https://github.com/ai-evals-course/evals-skills) 提供 LLM 評估相關 skills，包含評估流程健檢、失敗案例分析、合成資料、評審校準與 RAG 評估。
-
-```sh
-npx skills add https://github.com/ai-evals-course/evals-skills -g
-```
-
-只需要其中一個時，可以指定名稱，例如：
-
-```sh
-npx skills add https://github.com/ai-evals-course/evals-skills --skill eval-audit -g
-```
-
-`-g` 會安裝到使用者層級；若只想用在目前專案，可移除 `-g`。
-
-### 第三方 skills 的更新方式
-
-- **使用 `npx skills` 安裝**：獨立安裝的 skills 不會自動跟著上游更新。執行 `npx skills check` 檢查更新，再執行 `npx skills update` 更新；只更新使用者層級的 skills 可用 `npx skills update -g`。
-- **使用 Codex plugin marketplace 安裝**：plugin 更新時，包含的 skills 也可隨 plugin 更新。Codex 會重新整理已設定的 Git marketplace；也可執行 `codex plugin marketplace upgrade <marketplace-name>` 手動重新整理。重新整理後開啟新對話，並確認安裝的 plugin 版本；來源、版本設定及平台行為都會影響取得的內容。[Codex plugin 文件](https://developers.openai.com/plugins/build/plugins)
-- **使用 Claude Code plugin marketplace 安裝**：更新方式取決於 marketplace 的自動更新設定。第三方 marketplace 預設關閉自動更新，可在 `/plugin` 的 Marketplaces 分頁啟用；也可在 Installed 分頁選擇 Update now，或在終端機執行 `claude plugin update <plugin>@<marketplace>`。更新後執行 `/reload-plugins` 或開啟新對話。[Claude Code plugin 文件](https://code.claude.com/docs/en/discover-plugins#keep-plugins-updated)
-
-不同安裝方式各自管理版本；安裝方式與可用的 skill 名稱以各上游文件為準。
-
-## 設計原則
-
-- 每個 skill 只有一份 `SKILL.md`，作為跨平台的唯一指令來源。
-- 共用 frontmatter 僅保留 Agent Skills 標準的 `name` 與 `description`。
-- 不要在共用內容使用 `$ARGUMENTS`、`${CLAUDE_*}`、`!` command injection 或其他 Claude Code 預處理語法。
-- Codex 專屬的 UI、呼叫政策與 MCP 依賴放在選用的 `agents/openai.yaml`。
-- 只有兩個平台的執行流程確實不同時，才建立由共同來源產生的平台 artifact；不要手動維護兩份幾乎相同的指令。
-
-## 相容性基準與資料來源
-
-本 repo 採用 [Agent Skills 規範](https://agentskills.io/specification) 的可攜子集：skill 目錄必須包含 `SKILL.md`，frontmatter 的 `name` 必須與目錄名稱一致，`description` 必須說明功能與使用時機。
-
-- [OpenAI：Build skills](https://learn.chatgpt.com/docs/build-skills) 說明 Codex 的 skill 結構、載入位置與選用的 `agents/openai.yaml`。
-- [Anthropic：Extend Claude with skills](https://code.claude.com/docs/en/slash-commands) 說明 Claude Code 的 `SKILL.md`、載入位置與平台專屬擴充語法。
-- `scripts/validate_skills.py` 將共用 frontmatter 限制為 `name` 與 `description`，並拒絕 Claude Code 專屬的參數替換、環境變數替換與 shell injection，避免共用內容只在單一平台生效。
-
-## Plugin 安裝
-
-可將整套五個 skills 作為一個 plugin 安裝；skill 內容仍共用此 repository 的
-`skills/` 目錄。
+可透過 plugin 安裝全部 skills：
 
 Codex：
 
@@ -139,41 +32,42 @@ Claude Code：
 /plugin install luke-agent-skills@luke-agent-skills
 ```
 
-## 手動安裝
+### 手動安裝
 
-將所需的 skill 目錄完整複製到目標工具的 skill discovery 位置。
+將所需的 `skills/<skill-name>/` 目錄完整複製到下列位置，包含 `SKILL.md` 與其附屬檔案：
 
-- Codex：內建 skill installer 使用 `$CODEX_HOME/skills/<skill-name>/`（預設為 `~/.codex/skills/<skill-name>/`）；現行官方文件也列出使用者層級的 `~/.agents/skills/<skill-name>/` 與 repository 層級的 `.agents/skills/<skill-name>/`。請以 Codex 的 `/skills` 確認目前環境實際載入的位置。
-- Claude Code：使用 `~/.claude/skills/<skill-name>/`，或專案內的 `.claude/skills/<skill-name>/`。
+| 工具 | 使用者層級 | 目前專案 |
+| --- | --- | --- |
+| Codex | `~/.agents/skills/<skill-name>/` | `.agents/skills/<skill-name>/` |
+| Claude Code | `~/.claude/skills/<skill-name>/` | `.claude/skills/<skill-name>/` |
 
-例如，安裝 `luke-commit-review` 時，複製整個
-`skills/luke-commit-review/` 目錄，而不是只複製 `SKILL.md`。
+載入細節見 [Codex](https://learn.chatgpt.com/docs/build-skills) 與 [Claude Code](https://code.claude.com/docs/en/slash-commands) 官方文件。
 
-## 全域指令與搬家
+## 第三方 skill 與工具推薦
 
-`global/` 依工具保存完整的個人全域指令，與 `skills/` 的工作流程分開管理。
-Repo 根目錄的 `AGENTS.md`、`CLAUDE.md` 則留給本專案自己的規則。
+以下 skills 與工具由各自的上游專案維護，需另外安裝或設定；本 repo 不收錄它們的內容。
+
+| 名稱 | 用途 |
+| --- | --- |
+| [Archify](https://github.com/tt-a1i/archify) | 將需求、程式碼或 Mermaid 轉成互動式圖表。 |
+| [Diagram Design](https://github.com/cathrynlavery/diagram-design) | 製作架構圖、流程圖、資料模型與各種圖表。 |
+| [Ponytail](https://github.com/DietrichGebert/ponytail) | 精簡開發做法，並提供變更審查、整個 repo 檢查與技術債整理。 |
+| [Eval Skills](https://github.com/ai-evals-course/evals-skills) | 協助 LLM 評估、失敗案例分析、合成資料與 RAG 評估。 |
+| [pstack](https://github.com/cursor/plugins/tree/main/pstack) | poteto 的工程工作流程，涵蓋程式碼理解、設計、除錯、審查與驗證。 |
+| [auto-harness](https://github.com/neosigmaai/auto-harness) | 根據失敗紀錄反覆改善 agent harness，並透過評估與回歸檢查決定是否保留改動。 |
+
+安裝設定、功能與更新方式請見[第三方 skill 與工具使用說明](docs/third-party-skills.md)。
+
+## 全域指令
+
+`global/` 保存個人全域指令，檔案與預設套用位置如下：
 
 | Repo 內檔案 | 本機預設位置 |
 | --- | --- |
 | [global/codex/AGENTS.md](global/codex/AGENTS.md) | `~/.codex/AGENTS.md` |
 | [global/claude/CLAUDE.md](global/claude/CLAUDE.md) | `~/.claude/CLAUDE.md` |
 
-`~` 代表使用者的家目錄。Codex 若有設定 `CODEX_HOME`，目標位置改為
-`$CODEX_HOME/AGENTS.md`；該目錄若有非空白的 `AGENTS.override.md`，Codex 會優先讀取它。
-載入方式可參考 [Codex 官方文件](https://learn.chatgpt.com/docs/agent-configuration/agents-md)與
-[Claude Code 官方文件](https://code.claude.com/docs/en/memory)。
-
-搬到新電腦時：
-
-1. Clone 這個 repo，並依前面的安裝說明安裝需要的 skills。
-2. 檢查目標位置是否已有全域指令；若有，先備份並比對差異，再決定要套用的內容。
-3. 建立需要的目標目錄，依上表手動複製兩個檔案。
-4. 在工具中開啟新對話，確認全域指令已載入。
-
-安裝本 repo 的 plugin 只會安裝 skills，不會自動套用 `global/` 內的檔案。
-日常維護以 repo 版本為準：先修改 repo 內的檔案，再複製到本機生效位置；
-若先在本機修改，也要將差異同步回 repo。兩份指令各自保留工具需要的內容，不會自動合併或同步。
+需自行複製到對應位置；安裝本 repo 的 plugin 不會自動套用或同步這些檔案。
 
 ## 驗證
 
@@ -183,23 +77,10 @@ Repo 根目錄的 `AGENTS.md`、`CLAUDE.md` 則留給本專案自己的規則。
 python scripts/validate_skills.py
 ```
 
-此檢查會驗證本 repo 的可攜性約定與基本 skill 結構。GitHub Actions 會在 push 與 pull request 時自動執行相同檢查。
+GitHub Actions 會執行相同檢查。設計原則、相容性約定與資料來源見[維護說明](docs/maintaining.md)。
 
 ## 授權與來源標示
 
-本專案的 skills、文件與設定採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)；
-`scripts/` 內的程式碼採用 [MIT](scripts/LICENSE)。適用範圍見 [LICENSE](LICENSE)。
+Skills、文件與設定採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.zh-hant)，`scripts/` 程式碼採用 [MIT](scripts/LICENSE)。
 
-歡迎轉載、改作、商用或收錄到其他 skills 套件。分享時，須依 CC BY 4.0
-保留作者、著作權、授權與免責聲明，以及實際可行範圍內的來源連結，並標示是否修改。
-可放在 README、套件介紹或其他適合的來源說明處；建議使用下列範例，讓讀者能找到原始專案。
-
-```markdown
-本內容取自 [Luke Agent Skills](https://github.com/zrkluke/agent-skills)，
-作者為 [Luke（zrkluke）](https://github.com/zrkluke)，著作權所有 © 2026。
-採用 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) 授權，依現狀提供，不提供保證。
-修改情形：未修改。
-```
-
-如有改作，請將最後一行換成實際修改說明，例如「修改情形：調整為團隊的 PR 流程。」
-每個 `SKILL.md` 也附有來源與授權資訊，單獨轉載時可一併保留。
+適用範圍與條款見 [LICENSE](LICENSE)；署名要求與轉載範例見[來源標示說明](docs/attribution.md)。
